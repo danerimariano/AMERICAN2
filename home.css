@@ -428,10 +428,16 @@ body.actividades {
           transform-origin: center;
   -webkit-transform: scale(1) translateZ(0);
           transform: scale(1) translateZ(0);
-  -webkit-transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: -webkit-filter 200ms linear, -webkit-transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear;
-  transition: filter 200ms linear, transform 200ms linear, -webkit-filter 200ms linear, -webkit-transform 200ms linear;
+  -webkit-transition: -webkit-filter 200ms linear,
+ -webkit-transform 200ms linear;
+  transition: -webkit-filter 200ms linear,
+ -webkit-transform 200ms linear;
+  transition: filter 200ms linear,
+ transform 200ms linear;
+  transition: filter 200ms linear,
+ transform 200ms linear,
+ -webkit-filter 200ms linear,
+ -webkit-transform 200ms linear;
 }
 
 .card:hover .card__background {
@@ -933,5 +939,91 @@ h4 {
   color: white;
   position: absolute;
   top: 260px;
+}
+
+.pie-pagina {
+  width: 100%;
+  background-color: rgb(255,255,1);
+  font-family: OpenSans;
+}
+
+.pie-pagina .grupo-1 {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 50px;
+  padding: 45px 0px;
+}
+
+.pie-pagina .grupo-1 .box figure {
+  width: 80%;
+  height: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pie-pagina .grupo-1 .box figure img {
+  width: 125px;
+}
+
+.pie-pagina .grupo-1 .box h2 {
+  color: black;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.pie-pagina .grupo-1 .box p {
+  color: black;
+  margin-bottom: 10px;
+}
+
+.pie-pagina .grupo-1 .red-social a {
+  display: inline-block;
+  text-decoration: none;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: black;
+  margin-right: 10px;
+  background-color: rgb(255,255,1);
+  text-align: center;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+.pie-pagina .grupo-1 .red-social a:hover {
+  color: aqua;
+}
+
+.pie-pagina .grupo-2 {
+  background-color: black;
+  padding: 15px 10px;
+  text-align: center;
+  color: rgb(255,255,1);
+}
+
+.pie-pagina .grupo-2 small {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 800px) {
+  .pie-pagina .grupo-1 {
+    width: 90%;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    padding: 35px 0px;
+  }
 }
 /*# sourceMappingURL=home.css.map */
